@@ -1,0 +1,14 @@
+{
+  "$schema": "./ui.schema.json",
+  "box": {
+    "width": {
+      "value": 50,
+      "unit": "px"
+    },
+    "height": {
+        "value": 50,
+        "unit": "px"
+    }
+  },
+  "position": "static"
+}

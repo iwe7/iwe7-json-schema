@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "target": {
+      "type": "string",
+      "title": "调用对象"
+    },
+    "method": {
+      "type": "string",
+      "title": "调用方法"
+    },
+    "params": {
+      "type": "object",
+      "title": "附加参数",
+      "default": {}
+    }
+  },
+  "required": [
+    "target", "method"
+  ]
+}

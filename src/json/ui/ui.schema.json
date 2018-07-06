@@ -1,0 +1,76 @@
+{
+  "$schema": "http://test.meepo.com.cn/schema/schema.json",
+  "type": "object",
+  "definitions": {
+    "css": {
+      "position": {
+        "type": "string",
+        "enum": ["static", "relative", "absolute", "fixed", "sticky"],
+        "default": "static"
+      }
+    },
+    "cssUnit": {
+      "type": "string",
+      "enum": [
+        "%", "in", "cm", "mm", "em", "ex", "pt", "pc", "px"
+      ]
+    },
+    "cssValue": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/cssUnit"
+        },
+        "value": {
+          "type": "number"
+        }
+      }
+    },
+    "cssPosition": {
+
+    },
+    "boxSize": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "object",
+          "$ref": "#/definitions/cssValue"
+        },
+        "max-height": {
+          "type": "object",
+          "$ref": "#/definitions/cssValue"
+        },
+        "min-height": {
+          "type": "object",
+          "$ref": "#/definitions/cssValue"
+        },
+        "max-width": {
+          "type": "object",
+          "$ref": "#/definitions/cssValue"
+        },
+        "min-width": {
+          "type": "object",
+          "$ref": "#/definitions/cssValue"
+        },
+        "width": {
+          "type": "object",
+          "$ref": "#/definitions/cssValue"
+        }
+      },
+      "required": [
+        "width", "height"
+      ]
+    }
+  },
+  "properties": {
+    "box": {
+      "type": "object",
+      "$ref": "#/definitions/boxSize"
+    },
+    "position": {
+      "type": "string",
+      "title": "定位属性",
+      "$ref": "#/definitions/css/position"
+    }
+  }
+}

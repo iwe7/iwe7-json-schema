@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "../widget.json",
+  "allOf": [{
+      "$ref": "../widget.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "object",
+          "properties": {
+            "selectable": {
+              "type": "boolean",
+              "default": false
+            },
+            "space": {
+              "type": "string",
+              "default": "nbsp",
+              "enum": [
+                "ensp", "emsp", "nbsp"
+              ]
+            },
+            "decode": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          "contents": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "title": "文本内容",
+                "default": "我是一段文本"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

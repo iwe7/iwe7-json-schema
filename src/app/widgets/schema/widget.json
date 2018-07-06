@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "debug": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "title": "名称"
+    },
+    "inputs": {
+      "$ref": "./inputs.json"
+    },
+    "outputs": {
+      "$ref": "./outputs.json"
+    },
+    "events": {
+      "type": "object",
+      "title": "方法"
+    },
+    "className": {
+      "type": "object",
+      "title": "样式类"
+    },
+    "style": {
+      "type": "object",
+      "title": "内联样式"
+    },
+    "contents": {
+      "type": "object",
+      "title": "内容"
+    },
+    "isLazy": {
+      "type": "boolean",
+      "default": true,
+      "title": "是否懒加载"
+    },
+    "script": {
+      "type": "string",
+      "title": "地址"
+    },
+    "selector": {
+      "type": "string",
+      "title": "选择符"
+    },
+    "wechat": {
+      "type": "string",
+      "title": "微信选择符"
+    }
+  },
+  "required": [
+    "name", "inputs", "isLazy", "script", "selector"
+  ]
+}

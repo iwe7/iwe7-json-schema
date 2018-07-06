@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "../schema/widget.json",
+  "allOf": [{
+      "$ref": "../schema/widget.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "object",
+          "title": "输入",
+          "properties": {
+            "selectable": {
+              "type": "boolean",
+              "default": false,
+              "title": "是否可选"
+            }
+          }
+        },
+        "contents": {
+          "type": "object",
+          "title": "内容",
+          "properties": {
+            "text": {
+              "type": "string",
+              "title": "文本内容",
+              "default": "我是一段文本"
+            }
+          }
+        },
+        "outputs": {
+          "type": "object",
+          "title": "输出",
+          "allOf": [{
+            "$ref": "../schema/outputs.json"
+          }]
+        }
+      }
+    }
+  ]
+}

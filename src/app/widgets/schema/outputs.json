@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "输出",
+  "properties": {
+    "iClick": {
+      "type": "object",
+      "title": "点击",
+      "$ref": "./event.json"
+    }
+  }
+}

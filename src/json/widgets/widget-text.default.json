@@ -1,0 +1,27 @@
+{
+  "$schema": "./widget-text.schema.json",
+  "name": "文本",
+  "debug": true,
+  "id": "id01",
+  "inputs": {
+    "decode": false
+  },
+  "outputs": {
+    "iClick": {
+      "method": "changeText",
+      "params": {
+        "text": "我是一个新的文本"
+      },
+      "target": "id01"
+    }
+  },
+  "isLazy": true,
+  "script": "widget-text",
+  "selector": "widget-text",
+  "wechat": "text",
+  "className": {},
+  "style": {},
+  "contents": {
+    "text": "我 是 一 段 文 本"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "./api.schema.json",
+  "list": [{
+    "title": "测试请求",
+    "name": "test",
+    "description": "接口详情",
+    "url": "http://test.meepo.com.cn/test.php",
+    "params": {
+      "id": "1"
+    }
+  }]
+}
